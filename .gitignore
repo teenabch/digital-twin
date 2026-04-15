@@ -1,0 +1,35 @@
+# Environment
+.env
+.env.local
+.env*.local
+
+# Memory (Claude Code)
+memory/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Lambda packaging
+lambda-deployment.zip
+lambda-package/
+backend/lambda-deployment.zip
+backend/lambda-package/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# week2 scratch
+week2/
+
+# OS
+.DS_Store
+Thumbs.db

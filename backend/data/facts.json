@@ -1,0 +1,20 @@
+{
+    "full_name": "Jose Bermeo",
+    "name": "Your Nickname",
+    "current_role": "Senior Risk Analystics Consultant",
+    "location": "Twin Cities, Minnesota",
+    "email": "josebermeo@protonmail.com",
+    "linkedin": "https://www.linkedin.com/in/josebermeo/",
+    "specialties": [
+      "Cloud Engineer",
+      "Data Analystics"
+    ],
+    "years_experience": 6,
+    "education": [
+      {
+        "degree": "BS in Computer Science and Data Science",
+        "institution": "University Of Wisconsin River Falls",
+        "year": "2019"
+      }
+    ]
+  }
