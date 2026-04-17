@@ -16,6 +16,11 @@ venv/
 dist/
 build/
 
+# Environment files
+.env
+.env.*
+!.env.example
+
 # Lambda packaging
 lambda-deployment.zip
 lambda-package/
@@ -24,8 +29,9 @@ backend/lambda-package/
 
 # Node / Next.js
 node_modules/
-.next/
 out/
+.next/
+*.log
 
 # week2 scratch
 week2/
@@ -33,3 +39,21 @@ week2/
 # OS
 .DS_Store
 Thumbs.db
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.d/
+*.tfvars.secret
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# AWS
+.aws/
