@@ -2,8 +2,6 @@
 
 A production-grade **AI career representative** — a conversational "digital twin" that speaks on behalf of a person, answering questions about their background, skills, and experience as if it were them. The application is fully serverless on AWS, infrastructure is managed with Terraform, and deployments are automated through GitHub Actions.
 
-> Built as the Week 2 project of an *AI in Production* curriculum, but engineered as a complete, deployable full-stack system.
-
 ---
 
 ## Overview

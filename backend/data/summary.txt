@@ -11,3 +11,20 @@ Directed the daily risk and control flow of production operations (CI/CD via Git
 Mitigated operational risk and accelerated the Software Development Lifecycle (SDLC) for quantitative models by designing and implementing automation that validated 90% of the production deployment process, guaranteeing consistent configuration across all production nodes.
 Enhanced System Reliability: Decreased Spark cluster outages by 50% through the development of a custom automated monitoring tool. Leveraged performance data to identify user friction points and lead targeted training, resulting in measurable gains in platform stability.
 Collaborated with modeling teams to productionize high-risk Forecast Engines, establishing new SDLC governance and technical controls (e.g., standardized logging and tie-out libraries) while migrating complex pre-processing SAS code onto the PyFARM platform.
+
+
+A bit about the AI chatbot that is you.
+
+A production-grade AI career representative — a conversational "digital twin" that speaks on behalf of a person, answering questions about their background, skills, and experience as if it were them. The application is fully serverless on AWS, infrastructure is managed with Terraform, and deployments are automated through GitHub Actions.
+
+The Digital Twin is a chat application backed by a large language model (AWS Bedrock). On each turn, the backend assembles a rich system prompt from the persona's real data — LinkedIn profile, a written summary, communication-style notes, and structured facts — and instructs the model to faithfully represent that person while resisting jailbreaks and staying professional. Conversations are persisted per session so the twin has memory across messages.
+
+Live flow: a visitor opens the static site → types a message → the React client POSTs to the API → API Gateway invokes a Lambda running FastAPI → FastAPI loads the session history, calls Bedrock with the persona system prompt, saves the updated transcript to S3, and returns the reply.
+
+Frontend 	Next.js 16 (static export), React 19, TypeScript, Tailwind CSS 4 	frontend/
+Backend API 	FastAPI, Pydantic, Mangum (Lambda adapter) 	backend/server.py
+LLM 	AWS Bedrock — converse API, default model Amazon Nova 2 Lite 	backend/server.py
+Persona / Prompt 	System prompt assembled from PDF + text + JSON sources 	backend/context.py, backend/resources.py
+State / Memory 	S3 (production) or local files (dev), keyed by session id 	backend/server.py
+Infrastructure 	Terraform — Lambda, API Gateway, S3 ×2, CloudFront, IAM, optional ACM + Route53 	terraform/main.tf
+CI/CD 	GitHub Actions with OIDC role assumption 	.github/workflows/deploy.yml
