@@ -23,8 +23,8 @@ Live flow: a visitor opens the static site → types a message → the React cli
 
 Frontend 	Next.js 16 (static export), React 19, TypeScript, Tailwind CSS 4 	frontend/
 Backend API 	FastAPI, Pydantic, Mangum (Lambda adapter) 	backend/server.py
-LLM 	AWS Bedrock — converse API, default model Amazon Nova 2 Lite 	backend/server.py:106
+LLM 	AWS Bedrock — converse API, default model Amazon Nova 2 Lite 	backend/server.py
 Persona / Prompt 	System prompt assembled from PDF + text + JSON sources 	backend/context.py, backend/resources.py
-State / Memory 	S3 (production) or local files (dev), keyed by session id 	backend/server.py:70
+State / Memory 	S3 (production) or local files (dev), keyed by session id 	backend/server.py
 Infrastructure 	Terraform — Lambda, API Gateway, S3 ×2, CloudFront, IAM, optional ACM + Route53 	terraform/main.tf
 CI/CD 	GitHub Actions with OIDC role assumption 	.github/workflows/deploy.yml
