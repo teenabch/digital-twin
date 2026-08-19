@@ -173,5 +173,3 @@ Pushes to `main` (or manual `workflow_dispatch`) trigger the [Deploy Digital Twi
 **Tooling:** Terraform · Docker · GitHub Actions · uv
 
 ---
-
-*This README was generated from a knowledge-graph analysis of the repository (`/graphify`), then verified against the source.*
